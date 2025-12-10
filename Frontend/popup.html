@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Text Helper</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <div class="container">
+      <header class="header">
+        <h1>AI Text Simplifier</h1>
+      </header>
+
+      <main>
+        <div class="input-group">
+          <label for="inputText">Input Text:</label>
+          <textarea id="inputText" placeholder="Enter or paste text here..."></textarea>
+        </div>
+
+        <div class="input-group">
+          <label for="languageSelect">Target Language:</label>
+          <select id="languageSelect">
+            <option value="English">English</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Gujarati">Gujarati</option>
+            <option value="Punjabi">Punjabi</option>
+            <option value="Bengali">Bengali</option>
+            <option value="Marathi">Marathi</option>
+            <option value="Tamil">Tamil</option>
+            <option value="Telugu">Telugu</option>
+            <option value="Urdu">Urdu</option>
+            <option value="Kannada">Kannada</option>
+            <option value="Malayalam">Malayalam</option>
+            <option value="Odia">Odia</option>
+            <option value="Assamese">Assamese</option>
+            <option value="Sanskrit">Sanskrit</option>
+          </select>
+        </div>
+
+        <button id="processBtn" class="primary-btn">Process Text</button>
+
+        <!-- Evaluation is automatic on the backend; gold input removed -->
+      </main>
+      
+      <div id="loader" class="hidden">
+        <div class="spinner"></div>
+      </div>
+
+      <div id="resultBox" class="hidden">
+          <div id="detectedLang"></div>
+          <pre id="output"></pre>
+          <button id="copyBtn">Copy Result</button>
+      </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+

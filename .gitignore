@@ -1,0 +1,23 @@
+# Virtual Environments
+venv/
+venv2/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Sensitive keys
+.env
+*.env
+service-account-key.json
+*.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/

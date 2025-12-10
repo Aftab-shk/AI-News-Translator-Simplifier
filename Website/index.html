@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News Simplifier & Translator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="header-title">AI News Simplifier</h1>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Simplify & Translate the News</h1>
+          <p class="hero-subtitle">Making information accessible for everyone by breaking down complex news into simple summaries and translating them into local languages.</p>
+          <a href="#app" class="btn btn-primary">Try the Tool</a>
+        </div>
+        <div class="hero-image">
+          <img src="Images/image.png" alt="Abstract representation of AI and language">
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>AI Summarization</h3>
+            <p>Condenses long articles into simple summaries using advanced AI models.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Multi-Language Support</h3>
+            <p>Translates text into numerous Indian languages with high accuracy via Google Cloud.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Browser Extension</h3>
+            <p>Integrates directly into your browser for on-the-fly translation of selected text.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="app" class="app-section">
+      <div class="container app-container">
+        <div class="app-card">
+          <header class="app-header">
+             <h2 class="section-title">Instant News Translator</h2>
+          </header>
+          
+          <div class="input-group">
+            <label for="inputText">Paste the news article to simplify and translate:</label>
+            <textarea id="inputText" rows="10" placeholder="Enter a long news article here..."></textarea>
+          </div>
+
+          <div class="input-group">
+            <label for="languageSelect">Translate the simplified text to:</label>
+            <select id="languageSelect">
+                <option value="English">English (Summarize Only)</option>
+                <option value="Bengali">Bengali</option>
+                <option value="Gujarati">Gujarati</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Marathi">Marathi</option>
+                <option value="Punjabi">Punjabi</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Telugu">Telugu</option>
+                <option value="Urdu">Urdu</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="Odia">Odia</option>  
+                <option value="Assamese">Assamese</option>
+                <option value="Sanskrit">Sanskrit</option>
+            </select>
+          </div>
+
+          <div>
+            <button id="processBtn" class="btn btn-primary btn-submit">
+              <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+              <span id="button-text">Process Text</span>
+            </button>
+          </div>
+          
+          <!-- Evaluation now automatic on the backend; gold-reference UI removed -->
+          
+          <div id="result-container" class="result-container hidden">
+            <div class="result-header">
+                <h2>Your Result</h2>
+                <button id="copyBtn" class="copy-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                    Copy
+                </button>
+            </div>
+            <div id="output" class="output-box"></div>
+          </div>
+           
+          <div id="loader" class="hidden">
+            <div class="spinner"></div>
+              <p>Processing... this may take a moment.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+    
+  <footer class="main-footer">
+    <div class="container">
+      <p>Powered by Vertex AI & Google Cloud Translation. Mini Project.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script> 
+</body>
+</html>
